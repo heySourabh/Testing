@@ -9,7 +9,7 @@ public class MainTest {
         double[] p1 = {2, 5, 6};
         double[] p2 = {1, 7, 19};
 
-        double[] expected = new double[]{3, 13, 25};
+        double[] expected = new double[]{3, 12, 25};
         double[] actual = Main.addPolynomials(p1, p2);
 
         assertArrayEquals(expected, actual, 1e-15);
