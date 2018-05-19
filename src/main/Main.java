@@ -33,6 +33,7 @@ public class Main {
         }
 
         System.out.println(Arrays.toString(addPolynomials(coeffs1, coeffs2)));
+        System.out.println("Output again : " + Arrays.toString(addPolynomials(coeffs1, coeffs2)));
     }
 
     static double[] addPolynomials(double[] coeff1, double[] coeffs2) {
