@@ -12,4 +12,4 @@ build:
     #Create folders for test and code coverage
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
-    - mvn clean cobertura:cobertura
+    - mvn clean test
