@@ -7,4 +7,4 @@ install:
 script:
   - mvn test jacoco:report
 after_success:
-  - mvn coveralls:report
+  - mvn coveralls:report -X
