@@ -9,7 +9,7 @@ build:
 
   ci:
     #Create folders for test and code coverage
-    - mkdir -p shippable/testresults
+    #- mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
 
     # mvn install will create a `target` folder which will contain a jacoco.xml
@@ -20,4 +20,4 @@ build:
     # Shippable will look for the jacoco.xml file at
     # shippable/codecoverage/target/site/jacoco/jacoco.xml
     - cp -r target shippable/codecoverage
-    - cp -r target shippable/testresults
+    #- cp -r target shippable/testresults
