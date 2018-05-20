@@ -14,7 +14,7 @@ build:
 
     # mvn install will create a `target` folder which will contain a jacoco.xml
     # jacoco.xml will be present at path `target/site/jacoco/jacoco.xml`
-    - mvn install
+    - mvn clean test jacoco:report
 
     # copy this target folder to the `shippable/codecoverage` folder
     # Shippable will look for the jacoco.xml file at
