@@ -10,7 +10,7 @@ cache:
   - $HOME/.m2
 
 script:
-  - mvn install test
+  - mvn clean install test
 
 after_success:
   - mvn clean cobertura:cobertura coveralls:report
