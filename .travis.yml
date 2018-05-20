@@ -5,11 +5,9 @@ jdk:
 #  - openjdk7
   - oraclejdk8
 
-before_install:
-  - mvn install -DskipTests=true -e -B
-
 script:
-  - mvn test -B
+  - mvn install
+  - mvn test
 
 after_success:
-  - mvn cobertura:cobertura coveralls:report -B -P ci
+  - mvn cobertura:cobertura coveralls:report
