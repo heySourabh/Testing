@@ -1,7 +1,5 @@
 package main;
 
-import java.util.*;
-
 public class Main {
     static double[] addPolynomials(double[] coeff1, double[] coeffs2) {
         double[] res = new double[coeff1.length];
