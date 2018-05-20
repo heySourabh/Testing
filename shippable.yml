@@ -11,6 +11,6 @@ build:
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
     - shippable_retry mvn clean install test
-    - cp -r $SHIPPABLE_BUILD_DIR/target shippable/codecoverage
-    - mkdir -p shippable/buildoutput
-    - cp -r $SHIPPABLE_BUILD_DIR/target shippable/buildoutput
+    - ls
+    - cp -r target/src/ shippable/codecoverage
+    - cp -r target/tests/ shippable/testresults
