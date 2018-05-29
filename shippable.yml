@@ -3,9 +3,6 @@ jdk: openjdk9
 
 build:
 
-  # cache: true
-  # cache_dir_list:
-  #  - /root/.m2
 
   ci:
     #Create folders for test and code coverage
