@@ -31,15 +31,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.7.0</version>
                 <configuration>
-                    <release>10</release>
+                    <release>9</release>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.ow2.asm</groupId>
-                        <artifactId>asm</artifactId>
-                        <version>6.1.1</version> <!-- Use newer version of ASM -->
-                    </dependency>
-                </dependencies>
             </plugin>
 
             <plugin>
