@@ -1,0 +1,5 @@
+#! /bin/sh
+find -name "*.java" > sources.txt
+rm -r build/*
+javac -cp 'ext/*' -d build/ @sources.txt
+
