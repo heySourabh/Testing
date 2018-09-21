@@ -1,20 +1,21 @@
 language: java
-sudo: false
+
 dist: trusty
+sudo: false
 
-before_script:
-- unset -v _JAVA_OPTIONS
-- wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
+# Get latest install-jdk.sh script
+before_install:
+  - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
 
-jobs:
+matrix:
   include:
+# Java 10 "Oracle JDK"
+    - env: JDK='Oracle JDK 10'
+      install: . ./install-jdk.sh -F 10 -L BCL
 
-  - stage: ☕ jdk.java.net - OpenJDK - GPL
-    env: JDK=10
-    script: source install-jdk.sh -F 10  
-
-after_script:
-- echo JAVA_HOME = ${JAVA_HOME}
-- echo PATH = ${PATH}
-- ls ${JAVA_HOME}
-- java -version
+script:
+  - echo PATH = ${PATH}
+  - echo JAVA_HOME = ${JAVA_HOME}
+  - java -version
+  - mvn clean install
+  
