@@ -12,8 +12,6 @@ matrix:
       jdk: oraclejdk10
     - env: JDK='OpenJDK 10'
       install: . ./install-jdk.sh -F 10 -L GPL
-  allow_failures:
-    - env: JDK='Oracle JDK 10'
 
 script:
   - echo PATH = ${PATH}
